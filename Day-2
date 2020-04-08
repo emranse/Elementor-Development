@@ -1,20 +1,98 @@
 <?php 
 
+//PHP objective oriented
+//-------Day 2 ----------
+//====== Construct,Destruct,Interface,Abstruct,Inheritence =============
+
+Class Day_Two{
+	public function __construct ($db=null){
+		echo $db;
+	}
+	public function Middle_sec(){
+		echo "Hello World!<br>";
+	}
+	public function __destruct (){
+		echo "This sentence is ending here";
+	}
+
+}
+$object = new Day_Two("This is destruct method");
+echo "<br>";
+echo $object->Middle_sec();
+echo "<br>";
+
+//---------interface-------
+
+ interface Parent_Class{
+ 	//Must be public modifer 
+ 	//We can define not declared
+ 	public function hello();
+ }
+ Class Child_Class implements Parent_Class{
+ 	public function hello(){
+ 		echo "Hello ,This is Interface area";
+ 	}
+ }
+ $ob = new Child_Class;
+ echo $ob->hello();
+
+//-------Abstract-----------
+
+abstract class Ab_Class{
+
+		//Must have abstruct keyword before class
+	 	//Must have at least one abstruct method
+		//We can define and declard method
+		//We can add any type of access except private
+		//We can use static keyword
+
+	public function ab_class() {
+		echo 'Hello Ab class';
+	}
+	public static function welcome(){
+		echo "Welcome";
+	}
+	abstract public function ab_hello();
+}
+class Ab_Child_Class extends Ab_Class{
+	public function ab_hello(){
+		echo "Hello world!";
+		
+	}
+}
+$ob = new Ab_Child_Class;
+echo "<br>";
+echo $ob->welcome();
+echo "<br>";
+echo $ob->ab_hello();
+
+//-------Inheritence-----------
 
 
+Class Elementor {
+	public $name;
+	public $version;
 
+	public function __construct ($wname, $version){
+		echo $this->name = $wname;
+		echo $this->version = $version;
+	}
+	public function init($title){
+		echo $title;
+	}
+	public function widget(){
+		echo "Hello Elementor lovers";
+	}
+}
+class My_Widget extends Elementor{
 
+}
 
+$ob1 = new Elementor("My first widget", " 1.0.0");
+echo "<br>";
+$ob1 ->init("This is parent Class");
+echo "<br>";
+$ob2 = new My_Widget(" My first widget", " 1.1.0");
+echo "<br>";
+echo $ob1->widget();
 
-
-
-
-
-
-
-
-
-
-
-
-?>
