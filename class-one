@@ -1,0 +1,39 @@
+<?php 
+//PHP objective oriented
+//-------Day 1 ----------
+//====== Class,Object,Method,Getter,Setter,Access modifier,Static,Scope resolation operator ======
+
+Class Day_One{
+
+	private $emran;
+	
+
+	public function show_value(){
+		return $this->emran;
+	}
+	public function set_value($values){
+		$this->emran = $values;
+	}
+	public function widget(){
+
+	}
+
+}
+
+Class Widget_ST{
+	public static $static_ ;
+	public function Welcome($name){
+		self::$static_ = $name;
+	}
+}
+
+$object = new Day_One;
+$static = new Widget_ST;
+
+$object->set_value("Hello world! I am learning about OOP");
+$static->Welcome("This is static method");
+echo $object->show_value();
+echo "<br>";
+echo Widget_ST::$static_;
+
+?>
