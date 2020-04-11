@@ -1,0 +1,96 @@
+ <?php 
+
+// namespace Elementor;
+// //=====Day 3=======
+//======== Trait =========
+
+// trait hello{
+// 	public function welcome(){
+// 		echo "Hi man! Welcome";
+// 	}
+// }
+// trait hi{
+// 	public function wel(){
+// 		echo "Hello world";
+// 	}
+// }
+// class world {
+// 	use hello,hi;
+// }
+// $ob = new world;
+// $ob->welcome();
+
+
+// trait hello{
+// 	public function welcome(){
+// 		echo "Hi man! Welcome";
+// 	}
+// }
+// trait hi{
+// 	public function wel(){
+// 		echo "Hello world";
+// 	}
+// }
+// trait alltrait{
+// 	use hi,hello;
+// }
+// class fclass{
+// 	use alltrait;
+// }
+// $object = new fclass;
+// $object->wel();
+
+ // trait hello {
+ // 	public function welcome(){
+ // 		echo "Hello I am Boy";
+ // 	}
+ // }
+ // trait hi{
+ // 	public function welcome(){
+ // 		echo "Thank you";
+ // 	}
+ // }
+ // class fclass{
+ // 	use hello,hi{
+ // 		hi::welcome insteadof hello;
+ // 		hi::welcome as hello;
+ // 		hello::welcome insteadof hi;
+ // 		hello::welcome as hi;
+ // 	}
+ // }
+
+ // $ob = new fclass;
+ // $ob->hello();
+ // echo "<br>";
+ // $ob->hi();
+
+// //-----Namespace----------
+// use lib\module;
+
+// include "lib\module.php";
+
+// class Elementor{
+// 	public function __construct(){
+// 		echo "Hello world!";
+// 	}
+// }
+
+// echo __NAMESPACE__;
+
+// echo "<br>";
+
+// $ob = new Elementor;
+
+// echo "<br>";
+
+// $module = new module\Elementor;
+
+// echo "<br>";
+
+// module\hello();
+
+// echo "<br>";
+
+// echo module\VERSION;
+
+
